@@ -1,0 +1,17 @@
+<div class="row">
+  <div  >
+    <button type="button" class="btn btn-success" (click)="AffichageAddSelfie()">
+        Ajouter app-selfies-list
+    </button>
+  </div>
+</div>
+
+<div>
+  <app-add-selfie *ngIf="showMenu"  [selfieAPreparer]="selfieAPreparer" (annulerAjouter)="cacherAddSelfiezone()"></app-add-selfie>
+</div>
+<ng-template >
+<p>@showMenu</p>
+</ng-template>
+
+<app-selfies-readonly [unitem]="item"  *ngFor="let item of items" ></app-selfies-readonly>
+
